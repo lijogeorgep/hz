@@ -5,6 +5,7 @@ import 'package:hz/Batman.dart';
 import 'package:hz/Details.dart';
 import 'package:hz/Hulk.dart';
 import 'package:hz/SpiderDetails.dart';
+import 'package:hz/list_wheel.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,6 +33,7 @@ class HzHomePage extends StatefulWidget {
 class _HzHomePageState extends State<HzHomePage> {
   var _color;
   dynamic _opacity;
+  bool _toggled=true;
   @override
   void initState() {
     _color = Color(0xFFADD8E6);
@@ -227,6 +229,8 @@ class _HzHomePageState extends State<HzHomePage> {
                   curve: Curves.bounceIn,
                 ),
               ),
+             ElevatedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> ListWheel())), child: Text('click')),
+
             ],
           ),
         ),
