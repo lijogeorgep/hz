@@ -33,7 +33,7 @@ class HzHomePage extends StatefulWidget {
 class _HzHomePageState extends State<HzHomePage> {
   var _color;
   dynamic _opacity;
-  bool _toggled=true;
+  bool _toggled = true;
   @override
   void initState() {
     _color = Color(0xFFADD8E6);
@@ -229,8 +229,10 @@ class _HzHomePageState extends State<HzHomePage> {
                   curve: Curves.bounceIn,
                 ),
               ),
-             ElevatedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> ListWheel())), child: Text('click')),
-
+              ElevatedButton(
+                  onPressed: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ListWheel())),
+                  child: Text('click')),
             ],
           ),
         ),
