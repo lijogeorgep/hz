@@ -2,14 +2,14 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:hz/main.dart';
 
-class SpiderDetails extends StatefulWidget {
-  const SpiderDetails({Key? key}) : super(key: key);
+class BatmanDetails extends StatefulWidget {
+  const BatmanDetails({Key? key}) : super(key: key);
 
   @override
-  _SpiderDetailsState createState() => _SpiderDetailsState();
+  _BatmanDetailsState createState() => _BatmanDetailsState();
 }
 
-class _SpiderDetailsState extends State<SpiderDetails> {
+class _BatmanDetailsState extends State<BatmanDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,12 +34,12 @@ class _SpiderDetailsState extends State<SpiderDetails> {
           children: [
             Center(
               child: Hero(
-                tag: 'spider',
+                tag: 'batman',
                 child:GestureDetector(
                     onTap: ()=>Navigator.push(context, PageRouteBuilder(
                         transitionDuration: Duration(seconds: 2),
                         pageBuilder: (_, __, ___) => HzHomePage())),
-                    child: Image.network('https://cdna.artstation.com/p/assets/images/images/019/221/596/original/hibban-mohammed-ezgif-com-gif-maker.gif?1562575662',width: 200.0,)),
+                    child: Image.network('https://purepng.com/public/uploads/large/purepng.com-arkham-batmanbatmansuperherocomicdc-comicsbob-kanebat-manbruce-wayne-1701528523764v4kbc.png',width: 200.0,)),
               ),
             ),
             Container(
@@ -51,7 +51,7 @@ class _SpiderDetailsState extends State<SpiderDetails> {
                   animatedTexts: [
 
                     ScaleAnimatedText(
-                      'Spider man',
+                      'BATMAN',
                       textStyle: const TextStyle(
 
                         fontWeight: FontWeight.bold,

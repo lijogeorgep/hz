@@ -2,14 +2,14 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:hz/main.dart';
 
-class SpiderDetails extends StatefulWidget {
-  const SpiderDetails({Key? key}) : super(key: key);
+class HulkDetails extends StatefulWidget {
+  const HulkDetails({Key? key}) : super(key: key);
 
   @override
-  _SpiderDetailsState createState() => _SpiderDetailsState();
+  _HulkDetailsState createState() => _HulkDetailsState();
 }
 
-class _SpiderDetailsState extends State<SpiderDetails> {
+class _HulkDetailsState extends State<HulkDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,12 +34,12 @@ class _SpiderDetailsState extends State<SpiderDetails> {
           children: [
             Center(
               child: Hero(
-                tag: 'spider',
+                tag:'hulk',
                 child:GestureDetector(
                     onTap: ()=>Navigator.push(context, PageRouteBuilder(
                         transitionDuration: Duration(seconds: 2),
                         pageBuilder: (_, __, ___) => HzHomePage())),
-                    child: Image.network('https://cdna.artstation.com/p/assets/images/images/019/221/596/original/hibban-mohammed-ezgif-com-gif-maker.gif?1562575662',width: 200.0,)),
+                    child: Image.network('https://www.nicepng.com/png/full/10-104779_incredible-hulk-png-hulk-comic-png.png',width: 200.0,)),
               ),
             ),
             Container(
@@ -51,7 +51,7 @@ class _SpiderDetailsState extends State<SpiderDetails> {
                   animatedTexts: [
 
                     ScaleAnimatedText(
-                      'Spider man',
+                      'HULK',
                       textStyle: const TextStyle(
 
                         fontWeight: FontWeight.bold,
