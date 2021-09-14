@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hz/Details.dart';
 import 'package:hz/SpiderDetails.dart';
 
 void main() {
   runApp(MyApp());
+  SystemChrome.setEnabledSystemUIOverlays([]);
 }
 
 class MyApp extends StatelessWidget {
@@ -33,26 +36,58 @@ class _HzHomePageState extends State<HzHomePage> {
 
           height: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Hero(
-                    tag: 'mario',
-                    child:GestureDetector(
-                        child: Image.network('https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Paper-Mario-icon.png',width: 50.0,),
-                      onTap: ()=>Navigator.push(context, PageRouteBuilder(
-                          transitionDuration: Duration(seconds: 2),
-                          pageBuilder: (_, __, ___) => Details())),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1,color: Colors.black12),
+                    ),
+                    child: Column(
+                      children: [
+                        Hero(
+                          tag: 'mario',
+                          child:GestureDetector(
+                              child: Image.network('https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Paper-Mario-icon.png',width: 100.0,),
+                            onTap: ()=>Navigator.push(context, PageRouteBuilder(
+                                transitionDuration: Duration(seconds: 2),
+                                pageBuilder: (_, __, ___) => Details())),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('SUPER MARIO',textAlign: TextAlign.center,),
+                        ),
+                      ],
                     ),
                   ),
-                  Hero(
-                    tag: 'spider',
-                    child:GestureDetector(
-                      child: Image.network('https://toppng.com/uploads/preview/spider-man-11530958095aavuimi1gi.png',width: 50.0,),
-                      onTap: ()=>Navigator.push(context, PageRouteBuilder(
-                          transitionDuration: Duration(seconds: 2),
-                          pageBuilder: (_, __, ___) =>SpiderDetails())),
+                  SizedBox(width: 20,),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1,color: Colors.black12),
+                    ),
+                    child: Column(
+                      children: [
+                        Hero(
+                          tag: 'spider',
+                          child:GestureDetector(
+                            child: Image.network('https://toppng.com/uploads/preview/spider-man-11530958095aavuimi1gi.png',width: 100.0,),
+                            onTap: ()=>Navigator.push(context, PageRouteBuilder(
+                                transitionDuration: Duration(seconds: 2),
+                                pageBuilder: (_, __, ___) =>SpiderDetails())),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('SPIDERMAN',textAlign: TextAlign.center,),
+                        ),
+                      ],
                     ),
                   ),
 
