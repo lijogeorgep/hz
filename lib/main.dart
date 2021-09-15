@@ -45,23 +45,33 @@ class _HzHomePageState extends State<HzHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Orion'),centerTitle: true,
-      leading: Builder(
-        builder: (context){
-          return IconButton(
-            icon:Image.asset('assets/icons/menu.png',scale: 22.0,color: Colors.white,),
-            onPressed: (){
-              Scaffold.of(context).openDrawer();
-            },
-          );
-        },
-      ),
+      appBar: AppBar(
+        title: Text('Orion'),
+        centerTitle: true,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              icon: Image.asset(
+                'assets/icons/menu.png',
+                scale: 22.0,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
         actions: [
           Builder(
-            builder: (context){
+            builder: (context) {
               return IconButton(
-                icon: Image.asset('assets/icons/right-menu-bars.png',scale: 25.0,color: Colors.white,),
-                onPressed: (){
+                icon: Image.asset(
+                  'assets/icons/right-menu-bars.png',
+                  scale: 25.0,
+                  color: Colors.white,
+                ),
+                onPressed: () {
                   Scaffold.of(context).openEndDrawer();
                 },
               );
@@ -70,32 +80,72 @@ class _HzHomePageState extends State<HzHomePage> {
         ],
       ),
       drawer: Drawer(
-        child:Column(
-          children: [
-            DrawerHeader(
-              child:Text('Left Drawer'),
-            ),
-            ListTile(leading: Icon(Icons.person),title: Text('Electrical'),trailing: Icon(Icons.arrow_right),),
-            ListTile(leading: Icon(Icons.person),title: Text('Fan'),trailing: Icon(Icons.arrow_right),),
-            ListTile(leading: Icon(Icons.person),title: Text('Lighting'),trailing: Icon(Icons.arrow_right),),
-            ListTile(leading: Icon(Icons.person),title: Text('Plumbing'),trailing: Icon(Icons.arrow_right),),
-            ListTile(leading: Icon(Icons.person),title: Text('Bathroom Fittings'),trailing: Icon(Icons.arrow_right),),
-            ListTile(leading: Icon(Icons.person),title: Text('Appliances'),trailing: Icon(Icons.arrow_right),),
-          ],
-        )
-      ),
-      endDrawer: Drawer(
-          child:Column(
+          child: Column(
         children: [
-          ListTile(leading: Icon(Icons.person),title: Text('Top Brands'),),
-          ListTile(leading: Icon(Icons.person),title: Text('Flash Sales'),),
-          ListTile(leading: Icon(Icons.person),title: Text('New Arrivals'),),
-          ListTile(leading: Icon(Icons.person),title: Text('Hot Sales'),),
-          ListTile(leading: Icon(Icons.person),title: Text('Offer Zone'),),
-          ListTile(leading: Icon(Icons.person),title: Text('Combo Offers'),),
+          DrawerHeader(
+            child: Text('Left Drawer'),
+          ),
+          ListTile(
+          //  leading: Icon(Icons.person),
+            title: Text('Electrical'),
+            trailing: Icon(Icons.arrow_right),
+          ),
+          ListTile(
+          //  leading: Icon(Icons.person),
+            title: Text('Fan'),
+            trailing: Icon(Icons.arrow_right),
+          ),
+          ListTile(
+           // leading: Icon(Icons.person),
+            title: Text('Lighting'),
+            trailing: Icon(Icons.arrow_right),
+          ),
+          ListTile(
+           // leading: Icon(Icons.person),
+            title: Text('Plumbing'),
+            trailing: Icon(Icons.arrow_right),
+          ),
+          ListTile(
+           // leading: Icon(Icons.person),
+            title: Text('Bathroom Fittings'),
+            trailing: Icon(Icons.arrow_right),
+          ),
+          ListTile(
+          //  leading: Icon(Icons.person),
+            title: Text('Appliances'),
+            trailing: Icon(Icons.arrow_right),
+          ),
         ],
-      )
-      ),
+      )),
+      endDrawer: Drawer(
+          child: Column(
+        children: [
+          ListTile(
+           // leading: Icon(Icons.person),
+            title: Text('Top Brands'),
+          ),
+          ListTile(
+           // leading: Icon(Icons.person),
+            title: Text('Flash Sales'),
+          ),
+          ListTile(
+          //  leading: Icon(Icons.person),
+            title: Text('New Arrivals'),
+          ),
+          ListTile(
+         //   leading: Icon(Icons.person),
+            title: Text('Hot Sales'),
+          ),
+          ListTile(
+         //   leading: Icon(Icons.person),
+            title: Text('Offer Zone'),
+          ),
+          ListTile(
+          //  leading: Icon(Icons.person),
+            title: Text('Combo Offers'),
+          ),
+        ],
+      )),
       body: SafeArea(
         child: Container(
           height: double.infinity,
